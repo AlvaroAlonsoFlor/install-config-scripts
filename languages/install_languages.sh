@@ -1,9 +1,12 @@
+## Update Linux subsystem
 
-## Get essentials tools ##
-
-sudo apt-get install build-essential
+sudo apt-get update
+sudo apt-get upgrade
 
 ## Install node.js ###
+sudo apt-get install build-essential
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+echo source ~/.nvm/nvm.sh > ~/.zshrc
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | zsh
 exec $SHELL
