@@ -1,3 +1,6 @@
+JAVA_VERSION=openjdk@1.15.0
+PYTHON_VERSION=3.9.1
+
 ## Update Linux subsystem
 
 sudo apt-get update
@@ -20,11 +23,19 @@ nvm use --lts
 ### Install Java and Java version manager ###
 curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
 
-jabba install adopt@1.8.0-232
+jabba install $JAVA_VERSION
 
-### Install Python ###
+### Install pyenv ###
 
-sudo apt install python3
-sudo apt install python
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+
+## Install python ##
+
+pyenv install $PYTHON_VERSION
 
 
