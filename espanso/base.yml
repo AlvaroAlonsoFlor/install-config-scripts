@@ -32,16 +32,15 @@ matches:
   - trigger: ":wip:"
     replace: "🚧"
 
-
   # Date and time stuff
-  - trigger: ":date"
-    replace: "{{mydate}}"
+  - trigger: ":date:"
+    replace: "{{date}}"
     vars:
-      - name: mydate
+      - name: date
         type: date
         params:
-          format: "%m/%d/%Y"
-  - trigger: ":time"
+          format: "%Y/%m/%d"
+  - trigger: ":time:"
     replace: "{{time}}"
     vars:
       - name: time
