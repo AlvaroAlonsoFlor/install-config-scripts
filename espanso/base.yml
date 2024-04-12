@@ -20,6 +20,9 @@ matches:
   - trigger: ":check:"
     replace: "✅"
 
+  - trigger: ":warn:"
+    replace: "⚠️"
+
   - trigger: ":idea:"
     replace: "💡"
 
