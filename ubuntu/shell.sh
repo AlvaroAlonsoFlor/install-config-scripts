@@ -2,7 +2,5 @@
 
 set -euo pipefail
 
-## Shell
-
-sudo apt-get install zsh
-sudo apt-get install fonts-powerline
+sudo apt install zsh
+sudo apt install fonts-powerline
